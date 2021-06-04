@@ -24,6 +24,10 @@ class _DetailState extends State<Detail> {
             Divider(),
             Text("description:    ${data['body']}"),
             Divider(),
+            RaisedButton(
+              child: Text("Back to Dashboard"),
+              onPressed: () => {Navigator.pop(context)},
+            )
           ],
         ),
       ),
