@@ -19,10 +19,22 @@ class _DetailState extends State<Detail> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("id:      ${data['id']}"),
-            Text("title:   ${data['title']}"),
-            Divider(),
-            Text("description:    ${data['body']}"),
+            Text("ID: ${data['id']}"),
+            SizedBox(
+              height: 10,
+            ),
+            Text("TITTLE:   ${data['title']}"),
+            Divider(
+              height: 10,
+              thickness: 5,
+              color: Colors.black45,
+              indent: 40,
+              endIndent: 40,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text("DESCRIPTION:    ${data['body']}"),
             Divider(),
             RaisedButton(
               child: Text("Back to Dashboard"),
