@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Detail(),
-  ));
-}
-
 class Detail extends StatefulWidget {
+  Detail(post);
+
   @override
   _DetailState createState() => _DetailState();
 }
@@ -20,10 +16,12 @@ class _DetailState extends State<Detail> {
       ),
       body: Column(
         children: [
-          Text("ok"),
-          ElevatedButton(
-            onPressed: () {},
-            child: Text("Page 2"),
+          Text("detail page"),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text("Back to Dashboard"),
           ),
         ],
       ),
