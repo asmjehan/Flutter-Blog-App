@@ -43,10 +43,15 @@ class _DashboardState extends State<Dashboard> {
       ),
       body: new ListView.builder(
         padding: new EdgeInsets.all(8.0),
-        itemCount: posts.length == null ? 0 : posts.length,
+        itemCount: posts.length == null ? 0 : 15,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
-            title: Text(posts[index]["title"]),
+            title: Text((posts[index]["title"].length <= 30)
+                ? (posts[index]["title"])
+                : posts[index]["title"].substring(0, 30)),
+            subtitle: Text((posts[index]["body"].length <= 100)
+                ? (posts[index]["body"])
+                : posts[index]["body"].substring(0, 100)),
             onTap: () => {
               Navigator.push(
                   context,
